@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" th:href="@{/css/aboutUs.css}"/>
+    <link rel="stylesheet" th:href="@{/css/fragmentStyle.css}">
+</head>
+<body>
+    <div th:insert="fragments :: temporalNav"></div>
+    
+    <div class="multiple-profiles-container">
+        <!--Perfil 1-->
+        <div class="profile-container">
+            <h3 class="name">Federico Martín Andrade</h3>
+            <div class="im-container fede"></div>
+            <div class="redes-container">
+                <p>People think dreams aren't real just because they aren't made of matter, of particles. Dreams are real. But they are made of viewpoints, of images, of memories and puns and lost hopes. -- Neil Gaiman<br>
+            </p>
+            <br>
+            <a href="https://www.linkedin.com/in/federico-andrade-493272191/"><img title="https://www.linkedin.com/in/federico-andrade-493272191/" class="logo" th:src="@{/images/LinkedinLogo.png}" ></a>
+            <a href="mailto:federico.andrade@comunidad.ub.edu.ar"><img title="federico.andrade@comunidad.ub.edu.ar" class="logo" th:src="@{/images/gmail.svg}" ></a>
+
+            </div>
+        </div>
+        <!--Perfil 2-->
+        <div class="profile-container">
+            <h3 class="name">Luis Javier Esquivel</h3>
+            <div class="im-container luis"></div>
+            <div class="redes-container">
+                <p>Hola soy Luis Esquivel, tengo 38 años, soy psicólogo especializado en neuropsicología clínica. Soy estudiante de programación de la Universidad de Belgrano. Me puedes contactar en los siguientes enlaces
+                <br>
+                </p>
+            <br>
+            <a href="https://www.linkedin.com/in/luis-javier-esquivel-07b11773/"><img title="https://www.linkedin.com/in/luis-javier-esquivel-07b11773/" class="logo" th:src="@{/images/LinkedinLogo.png}" ></a>
+            <a href="mailto:esquivel.luis@comunidad.ub.edu.ar"><img title="esquivel.luis@comunidad.ub.edu.ar" class="logo" th:src="@{/images/gmail.svg}" ></a>
+            </div>
+        </div>
+        <!--Perfil 3-->
+        <div class="profile-container">
+            <h3 class="name">Alan Javier Jones</h3>
+            <div class="im-container alan"></div>
+            <div class="redes-container">
+                <p>Hola! Mi nombre es Alan, tengo 21 años y estoy estudiando programacion en la Universidad de belgrano.<br>
+                Podes encontrarme en las siguientes redes:<br>
+            </p>
+            <br>
+            <a href="https://www.linkedin.com/in/alan-jones-5114031a7/"><img title="https://www.linkedin.com/in/alan-jones-5114031a7/" class="logo" th:src="@{/images/LinkedinLogo.png}" ></a>
+            <a href="mailto:alanj.jones@comunidad.ub.edu.ar"><img title="alanj.jones@comunidad.ub.edu.ar" class="logo" th:src="@{/images/gmail.svg}" ></a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>Aplicacion web creada para la materia Practicas de Laboratorio por los alumnos Luis Esquivel, Federico Andrade y Alan Jones.
+        <br>
+        Universidad de Belgrano, Tecnicatura Universitaria en Programacion de Computadoras 2021.
+    </footer>
+</body>
+</html>

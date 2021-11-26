@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pagina Principal</title>
+    <link rel="stylesheet" th:href="@{/css/fragmentStyle.css}"/>
+    <link rel="stylesheet" th:href="@{/css/mainPage.css}"/>
+
+</head>
+<body>
+    <div th:insert="fragments :: temporalNav"></div>
+    <div class="bgimg-1">
+        <br>
+        <h1 style="text-align:center;">Bienvenido a DisExe!</h1>
+        <div class="text-box">
+            <div class="inside-box">
+                Nuestro objetivo es facilitar la comunicación entre los profesionales de la salud con sus pacientes.
+                Accediendo a esta plataforma los pacientes podrán ver las tareas o actividades que su profesional a cargo les asignó 
+                y de esta manera recordar sus obligaciones de manera rápida y sencilla. Y de igual manera el profesional podrá acceder 
+                a la plataforma para tener control sobre que actividades ha completado o no su paciente.               
+            </div>            
+        </div>
+    </div>
+
+    <footer>
+        Aplicacion web creada para la materia Practicas de Laboratorio por los alumnos Luis Esquivel, Federico Andrade y Alan Jones.
+        <br>
+        Universidad de Belgrano, Tecnicatura Universitaria en Programacion de Computadoras 2021.
+    </footer>
+</body>
+</html>

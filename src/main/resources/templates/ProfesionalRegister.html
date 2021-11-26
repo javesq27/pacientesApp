@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro del profesional.</title>
+    <link rel="stylesheet" th:href="@{css/fragmentStyle.css}"/>
+    <link rel="stylesheet" th:href="@{css/formStyle.css}"/>
+</head>
+<body>
+    <div th:insert="fragments :: temporalNav"></div>
+    <br>
+    <form class="prof" action="#" th:action="@{/RegisteredProfessional}" th:object="${professional}" method="post">
+        <h3>Registrese</h3>
+        <p th:if="${error}">El E-Mail o la Matricula ya estan registradas</p>
+        <label for="email">Email:</label>
+        <input type="email" name="email" th:field="*{username}" placeholder="Ingrese su Email.........." required>
+        <br>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" th:field="*{password}" placeholder="Ingrese su Contraseña.........." required>
+        <br>
+        <br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" th:field="*{name}" placeholder="Ingrese su Nombre.........." required>
+        <br>
+        <br>
+        <label for="telefono">Telefono:</label>
+        <input type="tel" name="telefono" th:field="*{phone}" placeholder="Ingrese su Telefono.........." required>
+        <br>
+        <br>
+        <label for="matricula">Matricula:</label>
+        <input type="number" name="matricula" th:field="*{idNumber}" min="0" max="99999" placeholder="Ingrese su Matricula.........." required title="Ingrese su matricula de 5 digitos">
+        <br>
+        <br>
+        <input class="sub" type="submit" value="Enviar">
+    </form>
+</body>
+</html>

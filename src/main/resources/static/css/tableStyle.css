@@ -1,0 +1,70 @@
+.professional {
+  width: 95%;
+  height: 20%;
+  color: #c548a0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 1%;
+  margin: auto;
+  margin-top: 2%;
+  background: #c8ebee;
+  border: #c548a0 solid 2px;
+  border-collapse: separate !important;
+  border-radius: 1px;
+  border-spacing: 2px;
+}
+
+.patient {
+  width: 95%;
+  height: 30%;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 1%;
+  margin: auto;
+  margin-top: 2%;
+  background: #ee8a2d;
+}
+
+.emergencytrue {
+  background: #e54560;
+}
+
+.task {
+  width: 95%;
+  height: 25%;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 1%;
+  margin: auto;
+  margin-top: 2%;
+  background: #714c8b;
+}
+
+.left {
+  width: 70%;
+  margin: 0;
+  height: 100%;
+  display:inline-block;
+}
+
+.right {
+  width: 25%;
+  margin: 0;
+  height: 100%;
+  display:inline-block;
+}
+
+.CtrueDtrue, .CtrueDfalse {
+  background: #212c89 !important;
+}
+
+.CfalseDtrue {
+  background: #ad4057;
+}
+
+.title {
+  width: 25%;
+}
+.alignElements {
+  width: 60%;
+}
+

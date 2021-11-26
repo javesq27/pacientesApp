@@ -1,0 +1,25 @@
+.container-custom{
+    width: 40vw;
+    height: auto;
+    position: absolute;
+    top: 25%;
+    right: 30%;
+    left: 30%;
+    padding-top: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color:rgba(0, 0, 0, 0.185);
+    box-shadow: 5px 10px 10px rgba(128, 128, 128, 0.452);
+    animation-name: animation;
+    animation-duration: 2s;
+    background-color: white;
+}
+
+@keyframes animation{
+    from {top: 100%; opacity: 0;}
+    to {top: 25%; opacity: 1;}
+}
+
+body{
+    background-color: rgb(218, 212, 212);
+}

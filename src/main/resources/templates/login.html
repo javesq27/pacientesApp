@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/fragmentStyle.css}">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+    <div th:insert="fragments :: temporalNav"></div>
+
+    <div class="container container-custom">
+        <h3 class="mb-3">Inicio de Sesion</h3>
+        <form name="f" th:action="@{/login}" method="post" class="mb-3">
+            <p th:if="${error}" class="text-danger">Nombre de Usuario o Contrasena son Incorrectas</p>
+            <div class="mb-3">
+                <label class="form-label" for="username">Ingrese su E-mail</label>
+                <input type="email" name="username" class="form-control" placeholder="Nombre@Ejemplo.com" required>                
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="password">Ingrese su contraseña</label>
+                <input type="password" name="password" class="form-control" placeholder="*************" required> 
+            </div>
+            <input type="submit" name="submit" class="btn btn-info">
+        </form>
+
+    </div>
+    <footer>
+        Aplicacion web creada para la materia Practicas de Laboratorio por los alumnos Luis Esquivel, Federico Andrade y Alan Jones.
+        <br>
+        Universidad de Belgrano, Tecnicatura Universitaria en Programacion de Computadoras 2021.
+    </footer>
+</body>
+</html>

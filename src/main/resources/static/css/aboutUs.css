@@ -1,0 +1,67 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    box-sizing: content-box;
+    font-family: 'Futura', Arial, sans-serif;
+    color: rgb(224, 240, 255);
+}
+
+.profile-container{
+    background-image: url("../images/grayback.jpg");
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.712);
+    height: 75vh;
+    max-height: 80vh;
+    min-width: 20vw;
+    width: 20vw;
+    justify-content: center;
+    display: block;
+    text-align: center;    
+    margin-top: 2vh;
+}
+.im-container{
+    margin: auto;
+    border-style: solid;
+    width: 90%;
+    height: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.alan{
+    background-image: url("../images/alan.jpg");
+}
+.fede{
+    background-image: url("../images/Fede.jpg");
+}
+.luis{
+    background-image: url("../images/Luis.jpg");
+}
+.redes-container{
+    padding: 0;
+    margin: 15px auto;
+    height: 45%;
+    width: 85%;
+    text-align: initial;
+    overflow: auto;
+}
+
+.name{
+    margin: 10px;
+}
+p{
+    margin: 0;
+}
+
+.multiple-profiles-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.logo{
+    max-height: 50px;
+    max-width: 50px;
+    margin: 15px;
+}

@@ -1,0 +1,42 @@
+/*
+.bgimg-1, .bgimg-2{
+	opacity: 0.75;
+	background-attachment: fixed;
+}
+*/
+
+.bgimg-1 {
+	background-image: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.3)),url("../images/wfh.jpg");
+	background-size: cover;
+	background-position: center;	
+	
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+/*
+.bgimg-2 {
+  	background-image: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.3)),url("../images/worriedman.jpg");
+  	min-height: 600px;
+}
+*/
+.text-box{
+	width: auto;
+	max-width: 600px;
+	height: auto;
+	max-height: 75vh;
+	position: absolute;
+	top: 16%;
+	left: 6%;
+	background-color: rgba(169, 169, 169, 0.753);	
+	border-radius: 3%;
+	padding: 10px;
+}
+
+.inside-box{
+	opacity: 1;
+	color: rgba(0,0,0,1);
+	font-size: 2em;
+	font-family: Arial Sans-serif;
+}

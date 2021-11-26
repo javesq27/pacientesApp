@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav</title>
+    <link rel="stylesheet" th:href="@{/static/css/fragmentStyle.css}"/>
+    <link rel="stylesheet" th:href="@{/css/fragmentStyle.css}"/>
+</head>
+<body>
+    <div th:fragment="temporalNav">
+        <nav class="n">
+            <a href="/"> 
+                <img th:src="@{/images/DisExe1.png}" class="logo-image">
+            </a>
+            <a href="/AboutUs">About us</a>
+            <a sec:authorize="!isAuthenticated()" href="/Register">Registrarse como profesional</a>
+            <a href="/OurProfessionals">Nuestros profesionales</a>
+            <a sec:authorize="!isAuthenticated()" href="/userProcess">Iniciar Sesion</a>
+            <a sec:authorize="isAuthenticated()" href="/userProcess">Menu Principal</a>
+            <a sec:authorize="hasRole('PROFESSIONAL')" href="/Professional/addPatient">Añadir un paciente</a>
+            <a sec:authorize="isAuthenticated()" href="/logout">Cerrar Sesion</a>
+        </nav>
+    </div>
+    <div th:fragment="userTaskNav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a th:href="@{/Patient/newTask}" class="btn btn-outline-primary my-2">Nueva Tarea</a>
+            <a th:href="@{/Patient/newRutine}" class="btn btn-outline-secondary my-2">Nueva Rutina</a>
+            <a th:href="@{/Patient/RutineList}" class="btn btn-outline-secondary my-2">Rutinas</a>
+            <button id="ctrue" type="button" class="btn btn-primary my-2">Mostrar Completadas</button>
+            <button id="cfalsedfalse" type="button" class="btn btn-info my-2">Ocultar Comunes</button>
+            <button id="cfalsedtrue" type="button" class="btn btn-danger my-2">Ocultar Atrasadas</button>
+            <a th:href="@{/Patient/DeleteCompletedTasks}" class="btn btn-success my-2">Borrar  Completadas</a>
+            <a th:href="@{/Patient/Emergency}" class="btn btn-danger my-2">EMERGENCIA</a>
+        </nav>
+    </div>
+    <div th:fragment="userNav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a th:href="@{/Patient}" class="btn btn-primary my-2">Tareas</a>
+            <a th:href="@{/Patient/newTask}" class="btn btn-outline-primary my-2">Nueva Tarea</a>
+            <a th:href="@{/Patient/newRutine}" class="btn btn-outline-secondary my-2">Nueva Rutina</a>
+            <a th:href="@{/Patient/RutineList}" class="btn btn-outline-secondary my-2">Rutinas</a>
+            <a th:href="@{/Patient/Emergency}" class="btn btn-danger my-2">EMERGENCIA</a>
+        </nav>
+    </div>
+    <div th:fragment="profUserMainNav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a th:href="@{'/Professional/'+${idP}+'/taskCreation'}" class="btn btn-outline-primary  btn-lg">Nueva Tarea</a>
+            <a th:href="@{'/Professional/'+${idP}+'/rutineList'}" class="btn btn-outline-primary">Rutinas</a>
+            <a th:href="@{'/Professional/'+${idP}+'/addRutine'}" class="btn btn-outline-primary">Nueva Rutina</a>
+            <button id="ctrue" type="button" class="btn btn-primary btn-lg">Mostrar Completadas</button>
+            <button id="cfalsedfalse" type="button" class="btn btn-info btn-lg">Ocultar Comunes</button>
+            <button id="cfalsedtrue" type="button" class="btn btn-danger btn-lg">Ocultar Atrasadas</button>
+        </nav>
+    </div>
+    <div th:fragment="profUserNav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a th:href="@{'/Professional/'+${idP}}" class="btn btn-primary  btn-lg">Tareas</a>
+            <a th:href="@{'/Professional/'+${idP}+'/taskCreation'}" class="btn btn-outline-primary  btn-lg">Nueva Tarea</a>
+            <a th:href="@{'/Professional/'+${idP}+'/rutineList'}" class="btn btn-outline-primary">Rutinas</a>
+            <a th:href="@{'/Professional/'+${idP}+'/addRutine'}" class="btn btn-outline-primary">Nueva Rutina</a>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu del Profesional</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/fragmentStyle.css}"/>
+    <link rel="stylesheet" th:href="@{/css/tableStyle.css}"/>    
+
+</head>
+<body>
+    <div th:insert="fragments :: temporalNav"></div>
+    <br>
+    <h1>Pacientes:</h1>
+    <div th:each="patient: ${list}" th:class="'patient emergency'+${patient.emergency}">
+        <h2 th:text="${patient.name}"></h2>
+        <br>
+        <a class="btn btn-info" th:href="@{'/Professional/'+${patient.id}}">Lista de Tareas</a>
+        <a class="btn btn-info" th:href="@{'/Professional/'+${patient.id}+'/taskCreation'}">Añadir Tarea</a>
+        <a class="btn btn-info" th:href="@{'/Professional/'+${patient.id}+'/rutineList'}">Rutinas</a>
+        <a class="btn btn-info" th:href="@{'/Professional/'+${patient.id}+'/addRutine'}">Nueva Rutina</a>
+        <a class="btn btn-info" th:href="@{'/Professional/Delete/'+${patient.id}}">Eliminar Paciente</a>
+        <span th:if="${patient.emergency}"><a class="btn btn-info" th:href="@{'/Professional/cancelEmergency/'+${patient.id}}">Quitar estado de emergencia</a></span>
+        <a class="btn btn-info" th:href="@{'/Professional/changePassword/'+${patient.id}}">Cambiar Contraseña</a>
+    </div>    
+</body>
+</html>

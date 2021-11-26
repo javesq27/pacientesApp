@@ -1,0 +1,48 @@
+
+html,body{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.n{
+	box-sizing: content-box!important;
+	width: 100vw !important;
+	height: 10vh !important;
+	display: flex !important;
+	background-image: url("../images/blackpattern.jpg");
+	
+	
+}
+nav > *{
+	height: 50% !important;
+	width: 10% !important;
+	text-align: center !important;
+	margin:auto !important;		
+	font-size: 1em !important;
+	font-family: Arial, Sans-serif;
+	color: white;
+
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100vw !important;
+	height: auto !important;
+	background-image: url("../images/blackpattern.jpg");
+	color: white;
+	text-align: center;
+}
+
+.logo-image{
+	height: 42px;
+	width: 100%;	
+}

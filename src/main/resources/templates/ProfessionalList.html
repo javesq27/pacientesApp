@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista del Profesional</title>
+    <link rel="stylesheet" th:href="@{/css/fragmentStyle.css}"/>
+    <link rel="stylesheet" th:href="@{/css/tableStyle.css}"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+    <div th:insert="fragments :: temporalNav"></div>
+    <br>
+    <form action="#" th:action="@{/OurProfessionals/search}" method="post" class="input-group mb-3">
+        <input type="text" name="search" class="form-control" placeholder="Buscar a Alguien en Especifico">
+        <div class="input-group-append">
+            <input type="submit" value="Buscar" class="btn btn-outline-secondary">
+        </div>
+    </form>
+
+    <table th:each="profs : ${list}" class="professional">
+        <tr>
+            <td><h2 th:text="${profs.name}" colspan="2"></h2></td>
+        </tr>
+        <tr>
+            <td class="title"><h3>E-Mail: </h3></td>
+            <td class="alignElements"><h3 th:text="${profs.username}"></h3></td>
+        </tr>
+        <tr>
+            <td><h3>Matricula: </h3></td>
+            <td><h3 th:text="${profs.idNumber}"></h3></td>
+        </tr>
+    </table>
+</body>
+</html>

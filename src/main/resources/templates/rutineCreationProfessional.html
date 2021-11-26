@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Rutina</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/fragmentStyle.css}"/>
+    <link rel="stylesheet" th:href="@{/css/formStyle.css}"/>
+</head>
+<body>
+    <div th:insert="fragments :: temporalNav"></div>
+    <div th:insert="fragments :: profUserNav"></div>  
+    <br>
+    <form class="prof" th:action="@{'/Professional/'+${idP}+'/newRutine'}" th:object="${rutineTask}" method="post">
+        <label>Nombre de la tarea:</label>
+        <input type="text" th:field="*{taskName}" required maxlength="255">
+        <br>
+        <br>
+        <label>Descripcion:</label>
+        <input type="text" th:field="*{description}" maxlength="255">
+        <br>
+        <br>
+        <label>Direccion:</label>
+        <input type="text" th:field="*{address}" maxlength="255">
+        <br>
+        <br>
+        <label>Hora:</label>
+        <input type="time" th:field="*{taskTime}" required>
+        <br>
+        <br>
+        <div class="weeks" th:each="w : ${week}">
+            <label th:text="${w.getDisplayValue()}"></label>
+            <input type="checkbox" name="dayList" th:value="${w.name()}">
+        </div>
+        <br>
+        <br>
+        <input class="sub" type="submit" value="Enviar">
+    </form>
+    
+</body>
+</html>
